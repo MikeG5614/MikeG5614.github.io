@@ -1,16 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const body = document.body; 
-    const themeToggle = document.getElementById('themeToggle');
-    function toggleTheme() {
-        body.classList.toggle('dark-theme');
-
-        if (body.classList.contains('dark-theme')) {
-            themeToggle.textContent = 'Light'; 
-        } else {
-            themeToggle.textContent = 'Dark'; 
-        }
-    }
-
-    
-    themeToggle.addEventListener('click', toggleTheme); 
+document.getElementById('modeToggle').addEventListener('change', function() {
+    document.body.classList.toggle('dark-theme', this.checked);
+    const label = document.querySelector('.label');
+    label.classList.toggle('dark', this.checked); // Add/remove dark class for background
 });

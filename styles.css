@@ -8,34 +8,29 @@ body {
 }
 
 body.dark-theme {
-    background-color:navy;
+    background-color: navy;
     color: white;
 }
 
 header {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: lightblue;
     color: #fff;
     padding-top: 1.5rem;
 }
 
-.theme-toggle {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #fff;
-    font-size: 1rem;
-}
-
 .theme-container {
     display: flex;
-    justify-content: end;
-    background-color: black;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: lightblue;
     color: white;
     padding-bottom: 1rem;
     padding-right: 3rem;
 }
+
 section {
     padding: 2rem;
     margin: 1rem 0;
@@ -46,11 +41,79 @@ section {
     margin: 0 auto;
 }
 
-
 .projects {
     margin-bottom: 1rem;
 }
 
 .project {
     margin-bottom: 1rem;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: blue; 
+}
+
+.link img {
+    vertical-align: middle;    
+}
+
+body.dark {
+    background: #292C35;
+}
+
+/* Toggle Slider Styles */
+.checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.label {
+    background-color: white; /* Default to white */
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 25px; /* Smaller height */
+    width: 50px; /* Smaller width */
+    padding: 2px; /* Less padding */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.icon {
+    width: 20px; /* Adjust icon size */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center adjustment */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.icon.sun {
+    left: 5px; /* Position sun on the left */
+    opacity: 1; /* Start visible */
+}
+
+.icon.moon {
+    left: 30px; /* Position moon on the right */
+    opacity: 0; /* Start hidden */
+}
+
+.checkbox:checked + .label .ball {
+    left: 25px; /* Move ball to the right */
+}
+
+.checkbox:checked + .label .sun {
+    opacity: 0; /* Fade out sun */
+}
+
+.checkbox:checked + .label .moon {
+    opacity: 1; /* Fade in moon */
+}
+
+.checkbox:checked + .label {
+    background-color: black; /* Dark mode background */
 }
