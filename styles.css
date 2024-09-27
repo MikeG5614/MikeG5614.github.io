@@ -66,54 +66,53 @@ body.dark {
     background: #292C35;
 }
 
-/* Toggle Slider Styles */
+/*Slider*/ 
 .checkbox {
-    display: none; /* Hide the checkbox */
+    display: none; 
 }
 
 .label {
-    background-color: white; /* Default to white */
+    background-color: white; 
     border-radius: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     position: relative;
-    height: 25px; /* Smaller height */
-    width: 50px; /* Smaller width */
-    padding: 2px; /* Less padding */
-    transition: background-color 0.3s ease; /* Smooth background transition */
+    height: 25px; 
+    width: 50px; 
+    padding: 2px; 
+    transition: background-color 0.3s ease;
 }
 
 .icon {
-    width: 20px; /* Adjust icon size */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center adjustment */
-    transition: opacity 0.3s ease; /* Smooth transition */
+    width: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    transition: opacity 0.3s ease;
 }
 
 .icon.sun {
-    left: 5px; /* Position sun on the left */
-    opacity: 1; /* Start visible */
+    left: 5px; 
+    opacity: 1; 
 }
 
 .icon.moon {
-    left: 30px; /* Position moon on the right */
-    opacity: 0; /* Start hidden */
+    left: 30px; 
+    opacity: 0; 
 }
 
 .checkbox:checked + .label .ball {
-    left: 25px; /* Move ball to the right */
+    left: 25px; 
 }
 
 .checkbox:checked + .label .sun {
-    opacity: 0; /* Fade out sun */
+    opacity: 0; 
 }
 
 .checkbox:checked + .label .moon {
-    opacity: 1; /* Fade in moon */
+    opacity: 1; 
 }
 
 .checkbox:checked + .label {
-    background-color: black; /* Dark mode background */
+    background-color: black; 
 }
